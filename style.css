@@ -1,0 +1,36 @@
+body{
+    margin-left: 50px;
+}
+
+.fastFacts{
+    width: 400px;
+    height: 600px;
+    border: 2px solid gray;
+    background-color: lightgray;
+    line-height: 1em;
+    padding-left: 20px;
+    padding-top: 5px;
+}
+
+.factInfo{
+    padding-left: 20px;
+    column-count: 2;
+    column-gap: 0px
+}
+
+img{
+    padding-left: 35px;
+}
+
+body{
+    width: 600px;
+    margin-bottom: 50px;;
+}
+
+h4{
+    border-bottom: 2px solid gray;
+}
+
+h3{
+    text-align: center;
+}
