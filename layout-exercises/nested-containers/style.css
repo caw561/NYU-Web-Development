@@ -1,0 +1,28 @@
+body{
+    margin: 16px;
+}
+
+.inner-box{
+    width: 50%;
+    margin: 0 auto;
+    padding: 16px;
+}
+
+#container-outer{
+    background-color: lightcoral;
+    width: 100%;
+    padding: 16px;
+    text-align: center;
+}
+
+#container-inner{
+    background-color: lightyellow;
+}
+
+#container-innerer{
+    background-color: lightgreen;
+}
+
+#container-innerest{
+    background-color: lightblue;
+}

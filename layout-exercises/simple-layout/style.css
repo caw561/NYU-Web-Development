@@ -1,0 +1,15 @@
+.row{
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+
+
+#left-column{
+    background-color: lightblue;
+    padding: 50px;
+}
+
+#right-column{
+    background-color: lightcoral;
+    padding: 100px;
+}
