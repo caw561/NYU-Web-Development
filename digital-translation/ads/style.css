@@ -1,0 +1,51 @@
+*{
+    margin: 0 0;
+}
+
+.main-body{
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    height: 100vh; /* Full viewport height */
+    margin: 8px;
+}
+
+.title-bar{
+    background-color: #E5E4E2;
+    width: 100vw;
+    height: 24px;
+    margin: 0 0;
+    border: 1px solid lightgrey;
+    padding: 8px;
+    position: sticky;
+    top: 0 
+}
+
+h2{
+    color: blueviolet;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.bottom-notes{
+    font-size: smaller;
+    color: darkgrey;
+    margin-top: 8px;
+}
+
+.small-pics-container{
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
+.small-pics-container > div > img{
+    width: 64px;
+    height: 80px;
+}
+
+.small-pics-container > div:hover{
+    border: 2px solid yellow;
+}
+
+.ad-body{
+    margin: 8px;
+}
