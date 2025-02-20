@@ -4,8 +4,8 @@
 
 .main-body{
     display: flex;
-    justify-content: center; /* Centers horizontally */
-    height: 100vh; /* Full viewport height */
+    justify-content: center; 
+    height: 100vh; 
     margin: 8px;
 }
 

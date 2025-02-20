@@ -34,7 +34,8 @@ h2{
 .menu-options{
     position: sticky;
     top: 40px;
-    padding: 8px;   
+    padding-top: 32px;   
+    padding-left: 16px;
 }
 
 .top-bar-menu{
