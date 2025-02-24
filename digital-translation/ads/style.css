@@ -14,14 +14,20 @@
 }
 
 .title-bar{
+    display: flex;
     background-color: #E5E4E2;
     width: 100vw;
     height: 24px;
     margin: 0 0;
     border: 1px solid lightgrey;
     padding: 8px;
-    position: sticky;
-    top: 0 
+    position: fixed;
+    top: 0;
+    gap: 16px;
+}
+
+.logo{
+    border-radius: 50%;
 }
 
 h2{
