@@ -101,3 +101,7 @@ h2{
 .ad > img{
     border-radius: 8px;
 }
+
+a{
+    text-decoration: none;
+}
