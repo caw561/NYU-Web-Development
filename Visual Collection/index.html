@@ -11,9 +11,55 @@
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="style.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>;
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
   </head>
   <body>
+    <div class="filters">
+        <select id="colorFilter">
+            <option value="all">Color (All)</option>
+            <option value="Red">Red</option>
+            <option value="Orange">Orange</option>
+            <option value="Yellow">Yellow</option>
+            <option value="Green">Green</option>
+            <option value="Blue">Blue</option>
+            <option value="Purple">Purple</option>
+            <option value="Pink">Pink</option>
+            <option value="Black">Black</option>
+            <option value="White">White</option>
+            <option value="Gray">Gray</option>
+        </select>
+
+        <select id="brandFilter">
+            <option value="all">Brand (All)</option>
+            <option value="Caron">Caron</option>
+            <option value="Big Twist">Big Twist</option>
+            <option value="Darn Goood Yarn">Darn Good Yarn</option>
+            <option value="Lion Brand">Lion Brand</option>
+            <option value="Loops & Threads">Loops & Threads</option>
+            <option value="Patons">Patons</option>
+        </select>
+
+        <select id="weightFilter">
+            <option value="all">Weight (All)</option>
+            <option value=0>0</option>
+            <option value=1>1</option>
+            <option value=2>2</option>
+            <option value=3>3</option>
+            <option value=4>4</option>
+            <option value=5>5</option>
+            <option value=6>6</option>
+            <option value=7>7</option>
+        </select>
+
+        <select id="materialFilter">
+            <option value="all">Material (All)</option>
+            <option value="Acrylic">Acrylic</option>
+            <option value="Cotton">Cotton</option>
+            <option value="Polyester">Polyester</option>
+            <option value="Silk">Silk</option>
+            <option value="Wool">Wool</option>
+        </select>
+    </div>
     
     <section class="btns"></section>
     <section class="wrapper"></section>

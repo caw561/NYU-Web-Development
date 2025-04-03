@@ -9,13 +9,13 @@ body {
     grid-template-columns: repeat(auto-fit, 200px);
     gap: 2em;
     margin: 2em 0;
+    
 }
 
 .filters {
     display: flex;
     gap: 2em;
     height: 50px;
-    display: fixed;
     align-items: center;
     top: 0;
     
@@ -26,35 +26,47 @@ body {
     padding:  0.2em 0.5em;
 }
 
+.expanded {
+    grid-column: 1 / -1; 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2em;
+    background: #f9f9f9;
+    border: 2px solid black;
+}
+
+.expanded img {
+    width: 200px; 
+    height: 200px; 
+}
+
+.expanded .meta-data.hide {
+    display: flex;  
+    width: auto; 
+    max-width: 1000px;
+    gap: 3em;
+}
+
+.expanded .meta-data.show {
+    display: none; 
+}
+
+.meta-data.hide {
+    display: none; 
+}
+
 
 .wrapper > * {
-    aspect-ratio: 1/1;
     border: 1px black solid;
     padding: 1em;
+    height: 225px;
 }
 
 h2 {
     margin: 0;
 }
 
-
-/* To add */
-
-.btns {
-    display: flex;
-    gap: 1em;
-}
-
-.btn {
-    cursor: pointer;
-    display: block;
-    text-decoration: none;
-}
-
 .hide {
     display: none;
-}
-
-.active {
-    text-decoration: underline;
 }
