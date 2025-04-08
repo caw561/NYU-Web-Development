@@ -13,10 +13,10 @@ fetch("Yarn.csv")
   })
   .catch((error) => console.error("Error loading CSV:", error));
 
-let wrapper = document.querySelector(".wrapper");
+let grid = document.querySelector(".yarn-grid");
 
 let renderBooks = (data) => {
-  wrapper.innerHTML = ""; // Clear previous content
+  grid.innerHTML = ""; // Clear previous content
   data.forEach((yarn) => {
     let newDiv = document.createElement("div");
     newDiv.classList.add("yarn-item"); // Add a class for filtering
@@ -28,26 +28,47 @@ let renderBooks = (data) => {
     newDiv.innerHTML = `
       <div class="meta-data show">
         <h3>${yarn.color}</h3>
-        <img src=${yarn.image} alt="YARN" width="100%">
-      </div>
-      <div class="meta-data hide">
-        <img src=${yarn.image} alt="YARN">
-        <div>
-          <p>Brand: ${yarn.brand}</p>
-          <p>Color: ${yarn.color}</p>
-          <p>Weight: ${yarn.weight}</p>
-          <p>Material: ${yarn.material}</p>
-          <p>Skein Stock: ${yarn.skeins}</p>
-          <a href=${yarn.link} target="_blank">Buy More</a>
+        <div class="white_background">
+          <img src=${yarn.image} alt="YARN" width="100%">
         </div>
-      </div>`;
+      </div>`
     newDiv.style.backgroundColor = yarn["hex-color"];
-    newDiv.addEventListener("click", () => {
-      newDiv.classList.toggle("expanded");
-    });
-    wrapper.append(newDiv);
+    newDiv.addEventListener("click", () => showYarnModal(yarn));
+    grid.append(newDiv);
   });
 };
+
+function showYarnModal(yarn) {
+  const modal = document.getElementById("yarnModal");
+  const image = document.getElementById("modalImage");
+  const details = document.getElementById("modalDetails");
+  const overlay = document.getElementById("modalOverlay");
+
+  image.src = yarn.image;
+  details.innerHTML = `
+    <p>Brand: ${yarn.brand}</p>
+    <p>Color: ${yarn.color}</p>
+    <p>Weight: ${yarn.weight}</p>
+    <p>Material: ${yarn.material}</p>
+    <p>Skein Stock: ${yarn.skeins}</p>
+    <a href="${yarn.link}" target="_blank">Buy More</a>
+  `;
+
+  modal.classList.add("show");
+  overlay.classList.add("show");
+}
+
+document.querySelector(".close-button").addEventListener("click", () => {
+  document.getElementById("yarnModal").classList.remove("show");
+  document.getElementById("modalOverlay").classList.remove("show");
+});
+
+// Optional: Close modal by clicking the overlay
+document.getElementById("modalOverlay").addEventListener("click", () => {
+  document.getElementById("yarnModal").classList.remove("show");
+  document.getElementById("modalOverlay").classList.remove("show");
+});
+
 
 // Filter dropdown elements
 const colorFilter = document.getElementById("colorFilter");
