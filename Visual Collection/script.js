@@ -34,6 +34,9 @@ let renderBooks = (data) => {
       </div>`
     newDiv.style.backgroundColor = yarn["hex-color"];
     newDiv.addEventListener("click", () => showYarnModal(yarn));
+    if (yarn.stock === "FALSE") {
+      newDiv.classList.add("out-of-stock");
+    }
     grid.append(newDiv);
   });
 };
