@@ -2,7 +2,21 @@ body {
     max-width: 1000px;
     margin: 0;
     font-family: Helvetica, sans-serif;
+    background-image: url('yarn-images/Opt4.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
 }
+
+.title {
+  padding-left: 1rem;
+}
+ .title h1{
+  font-family: 'Pacifico', cursive;
+  font-size: 2.5rem;
+  font-weight: normal;
+ }
 
 .wrapper {
     display: grid;
@@ -12,9 +26,12 @@ body {
 }
   
 .sidebar {
-    background: #f8f8f8;
-    padding: 1rem;
-    border-radius: 12px;
+  position: sticky;
+  top: 1rem; /* distance from the top when it sticks */
+  align-self: start; /* ensures it aligns with the top of its column */
+  background: #f8f8f8;
+  padding: 1rem;
+  height: fit-content;
 }
   
 .yarn-grid {
@@ -23,18 +40,19 @@ body {
     gap: 1rem;
 }
 
-.yarn-grid *{
-    border: black;
-    padding: 10px;
+.yarn-boxes{
+    border: solid darkgrey;
+    padding: 20px;
     padding-top: 0;
 }
 
 .filters {
-    display: flex;
-    gap: 2em;
-    height: 50px;
-    align-items: center;
-    top: 0;
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  margin-bottom: 1rem;
 }
 
 .white_background {
@@ -45,9 +63,17 @@ body {
     padding: 20px;               
     width: fit-content;          
     height: 125px;
-  }
-  
+}
 
+.modal_white_background{
+    display: flex;
+    justify-content: center;
+    align-items: center;         
+    background: white;           
+    padding: 20px;               
+    width: fit-content;          
+    height: 400px;
+}
 
 /* Overlay background */
 #modalOverlay {

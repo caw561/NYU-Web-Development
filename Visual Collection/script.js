@@ -26,7 +26,7 @@ let renderBooks = (data) => {
     newDiv.dataset.material = yarn.material;
 
     newDiv.innerHTML = `
-      <div class="meta-data show">
+      <div class="yarn-boxes">
         <h3>${yarn.color}</h3>
         <div class="white_background">
           <img src=${yarn.image} alt="YARN" width="100%">
@@ -40,18 +40,21 @@ let renderBooks = (data) => {
 
 function showYarnModal(yarn) {
   const modal = document.getElementById("yarnModal");
-  const image = document.getElementById("modalImage");
   const details = document.getElementById("modalDetails");
   const overlay = document.getElementById("modalOverlay");
 
-  image.src = yarn.image;
   details.innerHTML = `
-    <p>Brand: ${yarn.brand}</p>
-    <p>Color: ${yarn.color}</p>
-    <p>Weight: ${yarn.weight}</p>
-    <p>Material: ${yarn.material}</p>
-    <p>Skein Stock: ${yarn.skeins}</p>
-    <a href="${yarn.link}" target="_blank">Buy More</a>
+    <div class="modal_white_background">
+      <img src=${yarn.image} alt="YARN" width="100%">
+    </div>
+    <div>
+      <p>Brand: ${yarn.brand}</p>
+      <p>Color: ${yarn.color}</p>
+      <p>Weight: ${yarn.weight}</p>
+      <p>Material: ${yarn.material}</p>
+      <p>Skein Stock: ${yarn.skeins}</p>
+      <a href="${yarn.link}" target="_blank">Buy More</a>
+    </div>
   `;
 
   modal.classList.add("show");
@@ -102,10 +105,4 @@ brandFilter.addEventListener("change", filterItems);
 weightFilter.addEventListener("change", filterItems);
 materialFilter.addEventListener("change", filterItems);
 
-        
-
-// newDiv.addEventListener("click", () => {
-//   newDiv.style.backgroundColor;
-//   newDiv.style.backgroundColor = currentColor === "white" ? yarn["hex-color"] : "white";
-//   img.style.display = img.style.display === "none" ? "block" : "none";
-// });
+      
