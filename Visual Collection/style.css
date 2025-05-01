@@ -21,7 +21,7 @@ body {
 
 .wrapper {
   display: grid;
-  grid-template-columns: 250px 1fr; 
+  grid-template-columns: 225px 1fr; 
   gap: 1rem;
   padding: 1rem;
 }
@@ -43,6 +43,11 @@ body {
 .yarn-boxes{
   padding: 20px;
   padding-top: 0;
+}
+
+input{
+  width: 100%;
+  height: 30px;
 }
 
 .out-of-stock {
